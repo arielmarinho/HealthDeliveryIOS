@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class OrdersViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,8 @@ class OrdersViewController: UIViewController {
     
     @IBAction func btn_Logout(_ sender: Any) {
        try! Auth.auth().signOut()
-        dismiss(animated: true, completion: nil)
+        self.performSegue (withIdentifier: "login", sender: self)
+        exit(0)
     }
     
 

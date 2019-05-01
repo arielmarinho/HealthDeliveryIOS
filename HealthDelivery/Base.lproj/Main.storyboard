@@ -47,7 +47,7 @@
                                 <rect key="frame" x="93" y="187" width="189" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvF-Cp-snR">
                                 <rect key="frame" x="100" y="406" width="182" height="30"/>
@@ -92,7 +92,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="33f-Yj-V0W"/>
                     <connections>
                         <outlet property="etEmail" destination="FyQ-ZP-fhf" id="P4I-YI-WK5"/>
                         <outlet property="etPassword" destination="0SQ-s5-Lqj" id="CvQ-rf-em9"/>
@@ -115,7 +114,7 @@
                                 <rect key="frame" x="93" y="155" width="189" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC3-me-mY4">
                                 <rect key="frame" x="93" y="221.5" width="189" height="30"/>
@@ -123,8 +122,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqh-KD-L14">
-                                <rect key="frame" x="96" y="126" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqh-KD-L14">
+                                <rect key="frame" x="96" y="126" width="41" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="zSJ-0p-oKM"/>
                                 </constraints>
@@ -195,6 +194,41 @@
             </objects>
             <point key="canvasLocation" x="1870" y="-875"/>
         </scene>
+        <!--Call View Controller-->
+        <scene sceneID="12h-eO-r6N">
+            <objects>
+                <viewController id="QZs-IA-Mm3" customClass="CallViewController" customModule="HealthDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xlB-h9-LaJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Izl-TC-lvC">
+                                <rect key="frame" x="70" y="65" width="241" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj8-j9-CTa">
+                                <rect key="frame" x="159" y="130" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="Call:" destination="QZs-IA-Mm3" eventType="touchUpInside" id="Yhq-Ds-RlJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yAP-iA-Da9"/>
+                    </view>
+                    <connections>
+                        <outlet property="phone" destination="Izl-TC-lvC" id="h7k-im-q2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoB-A7-hgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813.5999999999999" y="-1355.1724137931035"/>
+        </scene>
         <!--Register Order-->
         <scene sceneID="RsE-i5-sfd">
             <objects>
@@ -260,6 +294,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegisterOrder:" destination="0Il-DA-gsx" eventType="touchUpInside" id="hLZ-ZB-B31"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0017504758429999999" green="0.61647777790000002" blue="0.0027160226529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -296,6 +333,12 @@
                         <viewLayoutGuide key="safeArea" id="fur-dF-WFY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Register Order" id="YYG-ef-ST8"/>
+                    <connections>
+                        <outlet property="etName" destination="xJK-Jc-0lO" id="xR1-LG-pX2"/>
+                        <outlet property="etPhone" destination="kIe-lJ-WqW" id="XYy-ki-yiD"/>
+                        <outlet property="etValueMax" destination="ixf-XI-RKn" id="0Jr-HZ-VeV"/>
+                        <outlet property="etValueMin" destination="Fy0-Kb-WW3" id="1bF-vD-fg9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfJ-KO-rRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,10 +378,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="login" id="7QK-kO-kGw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uac-Ur-TC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="1200"/>
+            <point key="canvasLocation" x="490" y="1083"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="9Jk-F2-Gyv">
@@ -381,6 +427,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R5T-P5-TKb"/>
+        <segue reference="cVg-Au-ek5"/>
     </inferredMetricsTieBreakers>
 </document>
