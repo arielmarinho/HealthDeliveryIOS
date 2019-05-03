@@ -11,6 +11,8 @@
 		0492C5002279E844009ED83F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C4FF2279E844009ED83F /* AboutViewController.swift */; };
 		0492C50A2279EC71009ED83F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C5092279EC71009ED83F /* MainTabController.swift */; };
 		04C047D7227A4F8B0099F2AF /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C047D6227A4F8B0099F2AF /* CallViewController.swift */; };
+		04C047D9227A73D30099F2AF /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C047D8227A73D30099F2AF /* OrderTableViewCell.swift */; };
+		04C047DB227A76460099F2AF /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C047DA227A76460099F2AF /* OrderModel.swift */; };
 		1F6CC2F32277BAC200E79023 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC2F22277BAC200E79023 /* CreateAccountViewController.swift */; };
 		1F6CC2F52277E45000E79023 /* RegisterOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC2F42277E45000E79023 /* RegisterOrderViewController.swift */; };
 		1F713D8D22761832008B4FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F713D8C22761832008B4FC5 /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		0492C4FF2279E844009ED83F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0492C5092279EC71009ED83F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		04C047D6227A4F8B0099F2AF /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		04C047D8227A73D30099F2AF /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		04C047DA227A76460099F2AF /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		1F6CC2F22277BAC200E79023 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		1F6CC2F42277E45000E79023 /* RegisterOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOrderViewController.swift; sourceTree = "<group>"; };
 		1F713D8922761831008B4FC5 /* HealthDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +125,9 @@
 				1F713D8C22761832008B4FC5 /* AppDelegate.swift */,
 				1F713D8E22761833008B4FC5 /* ViewController.swift */,
 				04C047D6227A4F8B0099F2AF /* CallViewController.swift */,
+				04C047D8227A73D30099F2AF /* OrderTableViewCell.swift */,
 				1F713D9022761834008B4FC5 /* Main.storyboard */,
+				04C047DA227A76460099F2AF /* OrderModel.swift */,
 				0492C4FF2279E844009ED83F /* AboutViewController.swift */,
 				0492C4FD2279E7B0009ED83F /* OrdersViewController.swift */,
 				0492C5092279EC71009ED83F /* MainTabController.swift */,
@@ -370,10 +376,12 @@
 			files = (
 				0492C5002279E844009ED83F /* AboutViewController.swift in Sources */,
 				0492C4FE2279E7B0009ED83F /* OrdersViewController.swift in Sources */,
+				04C047DB227A76460099F2AF /* OrderModel.swift in Sources */,
 				0492C50A2279EC71009ED83F /* MainTabController.swift in Sources */,
 				1F6CC2F52277E45000E79023 /* RegisterOrderViewController.swift in Sources */,
 				1F6CC2F32277BAC200E79023 /* CreateAccountViewController.swift in Sources */,
 				1F713D8F22761833008B4FC5 /* ViewController.swift in Sources */,
+				04C047D9227A73D30099F2AF /* OrderTableViewCell.swift in Sources */,
 				04C047D7227A4F8B0099F2AF /* CallViewController.swift in Sources */,
 				1F713D8D22761832008B4FC5 /* AppDelegate.swift in Sources */,
 			);
