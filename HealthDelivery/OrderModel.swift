@@ -7,13 +7,13 @@
 //
 
 class OrderModel{
-    var max:String?
-    var min:String?
+    var max:Double?
+    var min:Double?
     var name:String?
     var order_id:String?
     var phone:String?
     
-    init(max:String?, min:String?, name:String, order_id:String, phone:String) {
+    init(max:Double?, min:Double?, name:String, order_id:String, phone:String) {
         
         self.max = max;
         self.min = min;

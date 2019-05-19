@@ -23,8 +23,8 @@ class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSo
         let order: OrderModel
         order = OrdersList[indexPath.row]
         cell.lblName.text = order.name
-        cell.lblMin.text = order.min
-        cell.lblMax.text = order.max
+        cell.lblMin.text = "\(order.min!)"
+        cell.lblMax.text = "\(order.max!)"
         return cell
         
     }
@@ -52,7 +52,7 @@ class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSo
                     
                     
                     
-                    let order = OrderModel(max: orderMax as! String, min: orderMin as! String, name: orderName as! String, order_id: orderId as! String, phone: orderPhone as! String)
+                    let order = OrderModel(max: orderMax as! Double, min: orderMin as! Double, name: orderName as! String, order_id: orderId as! String, phone: orderPhone as! String)
                     
                     self.OrdersList.append(order)
                 }

@@ -28,9 +28,9 @@ class RegisterOrderViewController: UIViewController {
         let order = ["order_id" :key,
                      "name": etName.text! as String,
                      "phone": etPhone.text! as String,
-                     "min": etValueMin.text! as String,
-                     "max":etValueMax.text! as String
-                    ]
+                     "min": Double(etValueMin.text!),
+                     "max": Double(etValueMax.text!)
+            ] as [String : Any]
         refOrders.child(key!).setValue(order)
     }
     
