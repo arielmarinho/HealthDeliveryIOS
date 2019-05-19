@@ -28,8 +28,14 @@ class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSo
         return cell
         
     }
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let order = OrdersList[indexPath.row]
+        deleteOrder(id: order.order_id!)
+    }
     @IBOutlet weak var TBLorders: UITableView!
     var OrdersList = [OrderModel]()
 
@@ -40,7 +46,7 @@ class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSo
         refOrders = Database.database().reference().child("orders");
         
         refOrders.observe(DataEventType.value, with: {(snapshot) in
-            if snapshot.childrenCount>0{
+            if snapshot.childrenCount>=0{
                 self.OrdersList.removeAll()
                 for orders in snapshot.children.allObjects as![DataSnapshot]{
                     let orderObject = orders.value as? [String: AnyObject]
