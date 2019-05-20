@@ -11,6 +11,7 @@ import Firebase
 
 class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
     
+    
     var refOrders:DatabaseReference!
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,12 +30,14 @@ class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSo
         
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        //performSegue(withIdentifier: "EditViewController", sender: self)
         return true
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let order = OrdersList[indexPath.row]
         deleteOrder(id: order.order_id!)
+        
     }
     @IBOutlet weak var TBLorders: UITableView!
     var OrdersList = [OrderModel]()
@@ -76,15 +79,11 @@ class OrdersViewController: UIViewController, UITabBarDelegate,UITableViewDataSo
         exit(0)
     }
     
-/*
-        let alertController = UIAlertController(title: "iOScreator", message:
-            "Hello, world!", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-        
-        self.present(alertController, animated: true, completion: nil)
-    
-    */
     func deleteOrder (id :String){
         refOrders.child(id).setValue(nil)
     }
+    @IBAction func btnCall(_ sender: Any) {
+        performSegue(withIdentifier: "call", sender: self)
+    }
+    
 }

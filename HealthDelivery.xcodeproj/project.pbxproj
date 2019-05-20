@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0435DBD222921B3F008C3B99 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435DBD122921B3F008C3B99 /* EditViewController.swift */; };
 		0492C4FE2279E7B0009ED83F /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C4FD2279E7B0009ED83F /* OrdersViewController.swift */; };
 		0492C5002279E844009ED83F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C4FF2279E844009ED83F /* AboutViewController.swift */; };
 		0492C50A2279EC71009ED83F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C5092279EC71009ED83F /* MainTabController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0435DBD122921B3F008C3B99 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		0492C4FD2279E7B0009ED83F /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		0492C4FF2279E844009ED83F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0492C5092279EC71009ED83F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				1F713D8C22761832008B4FC5 /* AppDelegate.swift */,
 				1F713D8E22761833008B4FC5 /* ViewController.swift */,
 				04C047D6227A4F8B0099F2AF /* CallViewController.swift */,
+				0435DBD122921B3F008C3B99 /* EditViewController.swift */,
 				04C047D8227A73D30099F2AF /* OrderTableViewCell.swift */,
 				1F713D9022761834008B4FC5 /* Main.storyboard */,
 				04C047DA227A76460099F2AF /* OrderModel.swift */,
@@ -383,6 +386,7 @@
 				1F713D8F22761833008B4FC5 /* ViewController.swift in Sources */,
 				04C047D9227A73D30099F2AF /* OrderTableViewCell.swift in Sources */,
 				04C047D7227A4F8B0099F2AF /* CallViewController.swift in Sources */,
+				0435DBD222921B3F008C3B99 /* EditViewController.swift in Sources */,
 				1F713D8D22761832008B4FC5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
