@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jqv-Rj-zI6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -202,25 +202,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-uQ-lJ6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-uQ-lJ6">
                                 <rect key="frame" x="94" y="212" width="186" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Call">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_call:" destination="QZs-IA-Mm3" eventType="touchUpInside" id="PAV-zx-a3J"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-m7-FsK">
-                                <rect key="frame" x="94" y="136" width="186" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-m7-FsK">
+                                <rect key="frame" x="94" y="158" width="186" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tr-Fa-zt1">
+                                <rect key="frame" x="94" y="119" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.34984654160000001" green="0.61428052190000004" blue="0.3604618148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bzv-m7-FsK" firstAttribute="top" secondItem="7tr-Fa-zt1" secondAttribute="bottom" constant="18" id="Dkq-Pg-zE2"/>
+                            <constraint firstItem="7tr-Fa-zt1" firstAttribute="leading" secondItem="yAP-iA-Da9" secondAttribute="leading" constant="94" id="GUM-gb-ThX"/>
+                            <constraint firstItem="bzv-m7-FsK" firstAttribute="leading" secondItem="yAP-iA-Da9" secondAttribute="leading" constant="94" id="L8e-ak-rgf"/>
+                            <constraint firstItem="yAP-iA-Da9" firstAttribute="trailing" secondItem="bzv-m7-FsK" secondAttribute="trailing" constant="95" id="OCf-CJ-N8F"/>
+                            <constraint firstItem="Qcp-uQ-lJ6" firstAttribute="top" secondItem="bzv-m7-FsK" secondAttribute="bottom" constant="24" id="SB7-jC-5tP"/>
+                            <constraint firstItem="7tr-Fa-zt1" firstAttribute="top" secondItem="yAP-iA-Da9" secondAttribute="top" constant="55" id="aQz-jo-twi"/>
+                            <constraint firstItem="yAP-iA-Da9" firstAttribute="trailing" secondItem="7tr-Fa-zt1" secondAttribute="trailing" constant="232" id="f8A-Ac-9G6"/>
+                            <constraint firstItem="yAP-iA-Da9" firstAttribute="trailing" secondItem="Qcp-uQ-lJ6" secondAttribute="trailing" constant="95" id="gNI-5s-alF"/>
+                            <constraint firstItem="Qcp-uQ-lJ6" firstAttribute="leading" secondItem="yAP-iA-Da9" secondAttribute="leading" constant="94" id="nVo-5a-sSs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yAP-iA-Da9"/>
                     </view>
+                    <connections>
+                        <outlet property="phone" destination="bzv-m7-FsK" id="94X-8G-J2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoB-A7-hgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -502,6 +523,35 @@
             </objects>
             <point key="canvasLocation" x="2018" y="640"/>
         </scene>
+        <!--Location View Controller-->
+        <scene sceneID="UlD-Cn-ebv">
+            <objects>
+                <viewController id="Jqv-Rj-zI6" customClass="LocationViewController" customModule="HealthDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tr4-Jm-RwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aGG-Hx-duL">
+                                <rect key="frame" x="0.0" y="35" width="375" height="632"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aGG-Hx-duL" firstAttribute="trailing" secondItem="gYO-LS-sml" secondAttribute="trailing" id="LIG-mR-jWJ"/>
+                            <constraint firstItem="aGG-Hx-duL" firstAttribute="top" secondItem="gYO-LS-sml" secondAttribute="top" constant="15" id="VXO-Rc-B6r"/>
+                            <constraint firstItem="aGG-Hx-duL" firstAttribute="bottom" secondItem="gYO-LS-sml" secondAttribute="bottom" id="ZAf-3Q-0XW"/>
+                            <constraint firstItem="aGG-Hx-duL" firstAttribute="leading" secondItem="gYO-LS-sml" secondAttribute="leading" id="wYl-4i-8sj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gYO-LS-sml"/>
+                    </view>
+                    <connections>
+                        <outlet property="Map" destination="aGG-Hx-duL" id="dMH-wB-Ivn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he8-F1-EXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1818.4000000000001" y="-59.820089955022496"/>
+        </scene>
         <!--Register Order-->
         <scene sceneID="WXK-XD-h7r">
             <objects>
@@ -617,6 +667,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="wDq-Jh-pfA"/>
         <segue reference="R5T-P5-TKb"/>
     </inferredMetricsTieBreakers>
 </document>

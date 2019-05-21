@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0435DBD222921B3F008C3B99 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435DBD122921B3F008C3B99 /* EditViewController.swift */; };
+		0435DBD422939A15008C3B99 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435DBD322939A15008C3B99 /* LocationViewController.swift */; };
+		0435DBD622939B29008C3B99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0435DBD522939B29008C3B99 /* CoreLocation.framework */; };
 		0492C4FE2279E7B0009ED83F /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C4FD2279E7B0009ED83F /* OrdersViewController.swift */; };
 		0492C5002279E844009ED83F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C4FF2279E844009ED83F /* AboutViewController.swift */; };
 		0492C50A2279EC71009ED83F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C5092279EC71009ED83F /* MainTabController.swift */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		0435DBD122921B3F008C3B99 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		0435DBD322939A15008C3B99 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		0435DBD522939B29008C3B99 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0492C4FD2279E7B0009ED83F /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		0492C4FF2279E844009ED83F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0492C5092279EC71009ED83F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0435DBD622939B29008C3B99 /* CoreLocation.framework in Frameworks */,
 				F3CE80F99D579A49E2051C70 /* Pods_HealthDelivery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +135,7 @@
 				0435DBD122921B3F008C3B99 /* EditViewController.swift */,
 				04C047D8227A73D30099F2AF /* OrderTableViewCell.swift */,
 				1F713D9022761834008B4FC5 /* Main.storyboard */,
+				0435DBD322939A15008C3B99 /* LocationViewController.swift */,
 				04C047DA227A76460099F2AF /* OrderModel.swift */,
 				0492C4FF2279E844009ED83F /* AboutViewController.swift */,
 				0492C4FD2279E7B0009ED83F /* OrdersViewController.swift */,
@@ -174,6 +180,7 @@
 		FFCD6AD383595348160813A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0435DBD522939B29008C3B99 /* CoreLocation.framework */,
 				7D7F3801174314AC9A94867F /* Pods_HealthDelivery.framework */,
 			);
 			name = Frameworks;
@@ -380,6 +387,7 @@
 				0492C5002279E844009ED83F /* AboutViewController.swift in Sources */,
 				0492C4FE2279E7B0009ED83F /* OrdersViewController.swift in Sources */,
 				04C047DB227A76460099F2AF /* OrderModel.swift in Sources */,
+				0435DBD422939A15008C3B99 /* LocationViewController.swift in Sources */,
 				0492C50A2279EC71009ED83F /* MainTabController.swift in Sources */,
 				1F6CC2F52277E45000E79023 /* RegisterOrderViewController.swift in Sources */,
 				1F6CC2F32277BAC200E79023 /* CreateAccountViewController.swift in Sources */,
