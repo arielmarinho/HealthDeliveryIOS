@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class RegisterOrderViewController: UIViewController {
+class RegisterOrderViewController: UIViewController, UITextFieldDelegate {
     
     var refOrders: DatabaseReference!
     
@@ -20,8 +20,11 @@ class RegisterOrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.etValueMax.delegate = self
+        self.etValueMin.delegate = self
+        self.etName.delegate = self
+        self.etPhone.delegate = self
         refOrders = Database.database().reference().child("orders");
-        // Do any additional setup after loading the view.
     }
     func addOrder(){
         let key = refOrders.childByAutoId().key
@@ -38,4 +41,23 @@ class RegisterOrderViewController: UIViewController {
         addOrder()
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return(true)
+        
+    }
+    func create_alert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        create_alert(title: "Sucesso", message: "funcionou")
+    }
 }
