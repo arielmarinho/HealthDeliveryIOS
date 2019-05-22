@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         etEmail.delegate = self
         etPassword.delegate = self
         handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
-            print("Usuário logadou:", user?.email)
+            print("Usuário logado:", user?.email)
             if let user = user {
                 self.showNextScreen(user: user, animated: false)
             }
@@ -75,6 +75,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if error == nil {
                 self.performUserChange(user: result?.user)
             } else {
+                    self.criando_alert(title: "Erro", message: "usuario ou senha invalidos")
+                
                 print(error!)
             }
         }
@@ -93,6 +95,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    func criando_alert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 

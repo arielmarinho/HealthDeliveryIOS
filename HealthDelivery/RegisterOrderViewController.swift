@@ -20,10 +20,9 @@ class RegisterOrderViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.etPhone.delegate = self
         self.etValueMax.delegate = self
         self.etValueMin.delegate = self
-        self.etName.delegate = self
-        self.etPhone.delegate = self
         refOrders = Database.database().reference().child("orders");
     }
     func addOrder(){
@@ -38,7 +37,12 @@ class RegisterOrderViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func RegisterOrder(_ sender: Any) {
+        if (etName.text!.isEmpty || etPhone.text!.isEmpty || etValueMin.text!.isEmpty || etValueMax.text!.isEmpty){
+            create_alert(title: "Erro", message: "Por favor preencha todos os campos")
+        }
+        else{
         addOrder()
+        }
     }
     
     
@@ -57,7 +61,10 @@ class RegisterOrderViewController: UIViewController, UITextFieldDelegate {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        create_alert(title: "Sucesso", message: "funcionou")
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)-> Bool {
+        let allowed = "+1234567890"
+        let allowedCharSet = CharacterSet(charactersIn: allowed)
+        let typedCharset = CharacterSet(charactersIn: string)
+        return allowedCharSet.isSuperset(of: typedCharset)
     }
 }

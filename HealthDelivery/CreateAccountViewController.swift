@@ -41,6 +41,8 @@ class CreateAccountViewController: UIViewController {
                      self.UserChange(user: result?.user)
                 } else {
                     print(error!)
+                    self.criando_alert(title: "Erro", message: "Por favor preencha todos os campos")
+                    
                 }
             }
         
@@ -53,5 +55,11 @@ class CreateAccountViewController: UIViewController {
         mainTabBarController.selectedViewController = mainTabBarController.viewControllers?[2]
         present(mainTabBarController, animated: true,completion: nil)
     }
-    
+    func criando_alert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
