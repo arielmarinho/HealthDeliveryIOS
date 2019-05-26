@@ -18,15 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health Delivery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyC-Vb-b1a">
-                                <rect key="frame" x="123" y="309" width="169" height="59"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_logo_color_background" translatesAutoresizingMaskIntoConstraints="NO" id="EoU-6r-Ost">
+                                <rect key="frame" x="75" y="131" width="303" height="364"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.34984654160000001" green="0.61428052190000004" blue="0.3604618148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15748298168182373" green="0.4118117094039917" blue="0.33489495515823364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EoU-6r-Ost" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="4mc-Qc-WPA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EoU-6r-Ost" secondAttribute="bottom" constant="367" id="KtC-OW-zrd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EoU-6r-Ost" secondAttribute="trailing" constant="36" id="dt2-Vf-QiB"/>
+                            <constraint firstItem="EoU-6r-Ost" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="l1u-Ns-zQ8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -35,4 +37,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="white_logo_color_background" width="3400" height="2359"/>
+    </resources>
 </document>

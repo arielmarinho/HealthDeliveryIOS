@@ -42,6 +42,8 @@ class RegisterOrderViewController: UIViewController, UITextFieldDelegate {
         }
         else{
         addOrder()
+        showNextScreen()
+            
         }
     }
     
@@ -66,5 +68,11 @@ class RegisterOrderViewController: UIViewController, UITextFieldDelegate {
         let allowedCharSet = CharacterSet(charactersIn: allowed)
         let typedCharset = CharacterSet(charactersIn: string)
         return allowedCharSet.isSuperset(of: typedCharset)
+    }
+    func showNextScreen() {
+        print("Indo para a próxima tela")
+        let mainTabBarController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        mainTabBarController.selectedViewController = mainTabBarController.viewControllers?[0]
+        present(mainTabBarController, animated: true,completion: nil)
     }
 }

@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func showNextScreen(user: User?, animated: Bool = true) {
         print("Indo para a próxima tela")
         let mainTabBarController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
-        mainTabBarController.selectedViewController = mainTabBarController.viewControllers?[2]
+        mainTabBarController.selectedViewController = mainTabBarController.viewControllers?[0]
         present(mainTabBarController, animated: true,completion: nil)
             }
     
